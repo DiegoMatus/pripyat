@@ -27,6 +27,15 @@ function main(){
         });
     });
 
+    $('#contact-form2').on('submit', function(e){
+        swal({
+          title: "Gracias por tu correo!",
+          text: "Te responderemos en breve.",
+          timer: 2500,
+          showConfirmButton: false
+        });
+    });
+
 }
 
 $(document).on('ready', main);
