@@ -17,24 +17,12 @@ function main(){
         }
     });
 
-    $('form').on('submit', function(e){
+
+    $('#contact-form').on('submit', function(e){
         e.preventDefault();
-        swal("Enviado", "Gracias por tu correo!", "success")
-    })
+        swal("Enviado", "Gracias por tu correo!", "success");
+    });
+
 }
 
 $(document).on('ready', main);
-
-/*$(function(){
-    $('#contact').validate({
-        submitHandler: function(form) {
-            $(form).ajaxSubmit({
-                url: 'process.php',
-                success: function() {
-                    $('#contact').hide();
-                    $('#contact-form').append("<p class='thanks'>Gracias! Tu mensaje ha sido enviado</p>")
-                } 
-            });
-        }
-    });
-});*/
