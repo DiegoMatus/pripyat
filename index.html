@@ -12,6 +12,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 
@@ -26,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#"><img class="navbar-brand brand" src="img/logotipo.png" alt="logotipo"></a>
+                <a href="#"><img id="logotipo" class="navbar-brand brand" src="img/logotipo.png" alt="logotipo"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,14 +50,53 @@
     </nav>
 
     <!-- Header -->
-    <header id="top" class="header">
-        <div class="text-vertical-center">
-            <h1>Pripyat Studios</h1>
-            <h3>Fotografía &amp; Video digital</h3>
+    <header>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img class="" src="img/slide1.jpg" alt="...">
+              <div class="carousel-caption">
+                <h3>Pripyat Studios</h3>
+                <p>...</p>
+              </div>
+            </div>
+            <div class="item">
+              <img class="" src="img/slide2.jpg" alt="...">
+              <div class="carousel-caption">
+                <h3>Fotografía</h3>
+                <p>...</p>
+              </div>
+            </div>
+            <div class="item">
+              <img class="" src="img/slide3.jpg" alt="...">
+              <div class="carousel-caption">
+                <h3>Video</h3>
+                <p>...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
     </header>
 
-<!-- CÓCOCENOS -->
+<!-- CONÓCENOS -->
     <section id="about">
         <!--<h2 class="principal-title">Conócenos</h2>
         <hr class="small">-->
@@ -134,8 +174,30 @@
                     <div class="col-lg-12 text-center">
                         <h2>Miembros</h2>
                         <hr class="small">
-                        <p class="lead">Somos un estudio de fotografía y video digital ubicados en la ciudad de Xalapa, Ver. Nuestra especialidad está enfocada en la comunicación a través de la
-    producción de experiencias visuales.  </p>
+                        <figure class="col-xs-12 col-md-4">
+                            <img class="img-responsive img-rounded" src="img/uriel2.jpg" alt="Armando">
+                            <figcaption>Armando García Alvarado<br/><small>Dirección</small></figcaption>
+                        </figure>
+                        <figure class="col-xs-12 col-md-4">
+                            <img class="img-responsive img-rounded" src="img/uriel.jpg" alt="Alfredo">
+                            <figcaption>Alfredo Vivanco Algo<br/><small>Relaciones públicas</small></figcaption>
+                        </figure>
+                        <figure class="col-xs-12 col-md-4">
+                            <img class="img-responsive img-rounded" src="img/isa.jpg" alt="Isamar">
+                            <figcaption>Isamar Reyes Algo<br/><small>Relaciones públicas</small></figcaption>
+                        </figure>
+                        <figure class="col-xs-12 col-md-4">
+                            <img class="img-responsive img-rounded" src="img/diego.jpg" alt="Diego">
+                            <figcaption>Diego Matus Perdomo<br/><small>Post-Producción</small></figcaption>
+                        </figure>
+                        <figure class="col-xs-12 col-md-4">
+                            <img class="img-responsive img-rounded" src="img/uzziel.jpg" alt="Uzziel">
+                            <figcaption>Uzziel Aguilar Algo<br/><small>Staff</small></figcaption>
+                        </figure>
+                        <figure class="col-xs-12 col-md-4">
+                            <img class="img-responsive img-rounded" src="img/uriel.jpg" alt="Uriel">
+                            <figcaption>Uriel Lozada Algo<br/><small>Staff</small></figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -200,7 +262,47 @@
                             </div>
                         </div>
                     </div>
-                    <div><a href="#" class="btn btn-primary btn-custom">Leer más</a></div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-custom" data-toggle="modal" data-target="#myModal">
+                     ¡Escríbenos!
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade modal-email" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Envíar email</h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="col-md-12 text-left">
+                                <form action="mail.php" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label>Para:</label>
+                                        <p id="email" class="form-control-static">contacto@pripyatstudios.com</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email1">De:</label>
+                                        <input type="email" class="form-control" id="email1" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mensaje">Mensaje</label>
+                                        <textarea name="mensaje" id="mensaje" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputFile">Archivo</label>
+                                        <input type="file" id="InputFile">
+                                    </div>
+                                    <button type="submit" value="send" class="btn btn-primary">Enviar</button>
+                                </form>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <p><small class="modal-footer">*Es posible que deba configurar un cliente de correo. También puede envíar el correo desde su cliente web</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
@@ -271,7 +373,7 @@
                         </small>
                     </div>
                     <div class="col-xs-12 col-md-5 col-md-offset-1">
-                        <form action="mailto:contacto@pripyatstudios.com" method="post" class="form-horizontal">
+                        <form id="form" method="post" class="form-horizontal">
                             <div class="form-group">
                                 <label>Para:</label>
                                 <p class="form-control-static">contacto@pripyatstudios.com</p>
@@ -308,7 +410,7 @@
                         <li><i class="fa fa-phone fa-fw"></i> (045) 228 160 5440</li>
                         <li><i class="fa fa-phone fa-fw"></i> (045) 228 143 4903</li>
                         <hr class="small">
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="#">contacto@pripyatstudios.com</a>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:contacto@pripyatstudios.com">contacto@pripyatstudios.com</a>
                         </li>
                     </ul>
                     <br>
@@ -336,6 +438,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
+    <script src="js/sweetalert.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>

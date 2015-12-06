@@ -24,6 +24,14 @@ a {
     color: #04B3AE;
 }
 
+#members figure {
+    padding: 3% 5% 0 5%;
+}
+
+#members figure img {
+    border-radius: 50px;
+}
+
 /* Footer */
 
 footer {
@@ -36,7 +44,7 @@ hr.small {
     max-width: 100px;
 }
 
-nav, .nabvar, .navbar-default, .navbar-fixed-top{
+nav, .navbar-default {
     background: linear-gradient(rgba(04,179,173, 255), rgba(04,179,173,0));
     border: none;
     color: #FFFFFF;
@@ -45,7 +53,7 @@ nav, .nabvar, .navbar-default, .navbar-fixed-top{
     transition: 0.2s ease-in;
 }
 
-nav:hover, .navbar:hover, .navbar-default:hover, .navbar-fixed-top:hover {
+nav:hover, .navbar-default:hover {
     background: #FFFFFF;
     border-bottom: 1px solid #04B3AE;
     height: 50px;
@@ -67,20 +75,6 @@ nav:hover, .navbar:hover, .navbar-default:hover, .navbar-fixed-top:hover {
 }
 
 /* Custom Button Styles */
-
-.btn-dark {
-    border-radius: 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-    color: #fff;
-    background-color: rgba(0,0,0,0.7);
-}
-
 .btn-light {
     border-radius: 0;
     color: #333;
@@ -99,21 +93,6 @@ nav:hover, .navbar:hover, .navbar-default:hover, .navbar-fixed-top:hover {
 .toggle {
     margin: 5px 5px 0 0;
 }
-
-/* Header */
-
-.header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../img/bg1.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 /* About */
 
 .about {
@@ -185,9 +164,9 @@ nav:hover, .navbar:hover, .navbar-default:hover, .navbar-fixed-top:hover {
 }
 
 .brand:hover {
-    -moz-transform: scale(1.25, 1.25);
-    -webkit-transform: scale(1.25, 1.25);
-    transform: scale(1.25, 1.25);
+    -moz-transform: scale(1.125, 1.125);
+    -webkit-transform: scale(1.125, 1.125);
+    transform: scale(1.125, 1.125);
 }
 
 .text-primary {
@@ -202,6 +181,16 @@ nav:hover, .navbar:hover, .navbar-default:hover, .navbar-fixed-top:hover {
     margin-left: -14px;
 }
 
+.btn-primary {
+    background-color: #04B3AE;
+    border-color: #0493AE;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #04BFFE;
+    border-color: #049FFE;
+}
+
 .btn-custom {
     background-color: #EEEEEE;
     border-color: #CCCCCC;
@@ -214,7 +203,19 @@ nav:hover, .navbar:hover, .navbar-default:hover, .navbar-fixed-top:hover {
     color: #444444;
 }
 
+.modal-email {
+    color: #111111;
+}
+
+.modal-footer {
+    padding-top: 10px;
+}
+
 /* id Section */
+
+#logotipo {
+    opacity: 1;
+}
 
 #who {
     background-color: #FFFFFF;
