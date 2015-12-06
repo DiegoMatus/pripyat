@@ -19,8 +19,12 @@ function main(){
 
 
     $('#contact-form').on('submit', function(e){
-        e.preventDefault();
-        swal("Enviado", "Gracias por tu correo!", "success");
+        swal({
+          title: "Gracias por tu correo!",
+          text: "Te responderemos en breve.",
+          timer: 2500,
+          showConfirmButton: false
+        });
     });
 
 }
